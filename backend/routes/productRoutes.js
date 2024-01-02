@@ -6,7 +6,7 @@ const { getProducts, getASpecificProduct } = require('../controllers/productCont
 // @desc Fetched all product
 // @route GET /api/products
 // @access Public
-productRouter.get('/', getProducts);
+productRouter.route("/").get(getProducts);
 
 
 
@@ -14,7 +14,7 @@ productRouter.get('/', getProducts);
 // @desc Fetched a specific product by its ID
 // @route GET /api/products/:id
 // @access Public
-productRouter.get('/:id', getASpecificProduct);
+productRouter.route('/:id').get(getASpecificProduct);
 
 
 
